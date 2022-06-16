@@ -1,0 +1,192 @@
+/* Variables */
+:root {
+    /* Colors */
+    /* Flexbox */
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan:  hsl(179, 100%, 13%);
+    /* Neutral */
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+
+    /* Grid */
+    --red-box: red;
+    --orange-box: rgb(160, 106, 5);
+    --green-box: green;
+    --blue-box: rgb(5, 176, 214);
+
+    /* Fonts */
+    /* font-size */
+    --font-size: 15px;
+
+    /* Font Family */
+    --lexend-deca: 'Lexend Deca', sans-serif;
+    --shoulders-display: 'Big Shoulders Display', cursive;
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: var(--lexend-deca);
+}
+
+a {
+    display: inline-block;
+    padding: 1rem;
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.5s;
+}
+a:hover , .active {
+    border-radius: 7px;
+    background-color: rgb(73, 19, 71);
+    transition: all 0.5s;
+}
+/* Navbar */
+header {
+    background-color: orchid;
+    color: #fff;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav span {
+    font-size: 20px;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+/* Flex Design Styles */
+
+.flex-body {
+    background-color: var(--very-light-gray);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.cards {
+    width: 280px;
+    height: 450px;
+    padding: 30px;
+}
+
+.cards h2 {
+    font-family: var(--shoulders-display);
+    font-size: 35px;
+    margin: 25px 0;
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+}
+
+.cards p {
+    color: var(--transparent-white);
+    line-height: 1.7;
+    margin: 10px 0;
+}
+
+.cards .btn {
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: .8rem 1.5rem;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--very-light-gray);
+    margin-top: 50px;
+}
+
+.cards .btn:hover {
+    background-color: transparent;
+    color: var(--very-light-gray) !important;
+    border: 1px solid var(--very-light-gray);
+    transition: all 0.5s;
+}
+
+.flex-container .orange-card {
+    background-color: var(--bright-orange);
+}
+
+.flex-container .orange-card .btn{
+    color: var(--bright-orange);
+}
+
+.flex-container .dark-cyan-card {
+    background-color: var(--dark-cyan);
+}
+
+.flex-container .dark-cyan-card .btn{
+    color: var(--dark-cyan);
+}
+
+.flex-container .very-dark-cyan-card {
+    background-color: var(--very-dark-cyan);
+}
+
+.flex-container .very-dark-cyan-card .btn{
+    color: var(--very-dark-cyan);
+}
+
+/* Grid Design Style */
+.grid-body {
+    background-color: rgb(26, 24, 24);
+}
+
+.grid-container{
+    display: grid;
+    background-color: #06121b;
+    padding: 10px 50px;
+    width: 700px;
+    height: 500px;
+    margin: 100px auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-container .red-box{
+    background-color: var(--red-box);
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.grid-container .orange-box{
+    background-color: var(--orange-box);
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.grid-container .green-box{
+    background-color: var(--green-box);
+    grid-column: 2/1;
+    grid-row: 3/5;
+}
+
+.grid-container .bluebox1{
+    background-color: var(--blue-box);
+    grid-column: 2/4;
+}
+
+.grid-container .bluebox2{
+    background-color: var(--blue-box);
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
